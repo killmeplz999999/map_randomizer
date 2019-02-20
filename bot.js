@@ -14,7 +14,7 @@ client.on('message', message => {
 			var map ='none ';
 			var rdmmap = Math.floor(Math.random() * 8);
 			var bscmsg = "You will be playing the map ";
-			var pnmb = Math.floor(Math.random() * 1);
+			var pnmb = Math.floor(Math.random() * 2);
 			var pnmbf = 'text';
 			if (pnmb==0){pnmbf = 'as P1.';}
 			if (pnmb==1){pnmbf = 'as P2.';}

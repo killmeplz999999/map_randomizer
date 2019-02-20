@@ -6,7 +6,7 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content === 'map') {
+    if (message.content === '!map') {
 
 
 

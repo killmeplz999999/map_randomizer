@@ -1,34 +1,16 @@
-var Discord = require('discord.io');
-var logger = require('winston');
-var auth = require('./auth.json');
-// Configure logger settings
-logger.remove(logger.transports.Console);
-logger.add(new logger.transports.Console, {
-    colorize: true
+const Discord = require('discord.js');
+const client = new Discord.Client();
+
+client.on('ready', () => {
+    console.log('I am ready!');
 });
-logger.level = 'debug';
-// Initialize Discord Bot
-var bot = new Discord.Client({
-   token: auth.token,
-   autorun: true
-});
-bot.on('ready', function (evt) {
-    logger.info('Connected');
-    logger.info('Logged in as: ');
-    logger.info(bot.username + ' - (' + bot.id + ')');
-});
-bot.on('message', function (user, userID, channelID, message, evt) {
-    // Our bot needs to know if it will execute a command
-    // It will listen for messages that will start with `!`
-    if (message.substring(0, 1) == '!') {
-        var args = message.substring(1).split(' ');
-        var cmd = args[0];
-       
-	   
-        args = args.splice(1);
-        switch(cmd) {
-            // !map
-            case 'map':
+
+client.on('message', message => {
+    if (message.content === 'map') {
+
+
+
+
 			var map ='none ';
 			var rdmmap = Math.floor(Math.random() * 8);
 			var bscmsg = "You will be playing the map ";
@@ -45,12 +27,11 @@ if (rdmmap==5){map="Luna's Winter (FQHHR4WX)";}
 if (rdmmap==6){map='Skirmish (SJVEW3RQ) ';}
 if (rdmmap==7){map='A Thorn In Our Side (BPLF95JN) ';}
 if (rdmmap==8){map="Valder's Bane (7262BHZS)";}
-                bot.sendMessage({
-                    to: channelID,
-                    message: bscmsg + map + pnmbf
-                });
-            break;
-            // Just add any case commands if you want to..
-         }
-     }
+    	
+		message.reply(bscmsg + map + pnmbf);
+
+				  	}
 });
+// THIS  MUST  BE  THIS  WAY
+client.login(process.env.BOT_TOKEN);
+        

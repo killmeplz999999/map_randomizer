@@ -20,8 +20,8 @@ client.on('message', message => {
 			if (pnmb==1){pnmbf = 'as P2.';}
 if (rdmmap==0){map='Dueling Peaks (Z27TXBWT) ';}
 if (rdmmap==1){map='Watch Your Back (V3Z6ELNU) ';}
-if (rdmmap==2){map='Hinterland Hijinks 1.3 (G8G5FURD) ';}
-if (rdmmap==3){map='Skirmish (SJVEW3RQ) ';}
+if (rdmmap==2){map='Hinterland Hijinks 1.3 (MRM3H534) ';}
+if (rdmmap==3){map='Skirmish (GW24RKRB) ';}
     	
 		message.reply(bscmsg + map + pnmbf);
 

@@ -29,7 +29,7 @@ if (rdmmap==3){map='Skirmish (GW24RKRB) ';}
 });
 
 client.on('message', message => {
-    if (message.content === '!flip' or message.content === '!coin' message.content === '!coinflip') {
+    if (message.content === '!flip') {
 
 
 

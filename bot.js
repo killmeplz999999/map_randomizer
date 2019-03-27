@@ -26,11 +26,22 @@ if (rdmmap==3){map='Skirmish (GW24RKRB) ';}
 		message.reply(bscmsg + map + pnmbf);
 
 				  	}
-	if (message.content === '!flip' or message.content === '!coin' or message.content === '!coinflip' or message.content === '!flipcoin' or) {
+	if (message.content === '!flip'){
+var yesorno = 'yes';
+					}
+	if (message.content === '!coin'){
+var yesorno = 'yes';
+					}
+		if (message.content === '!coinflip'){
+var yesorno = 'yes';
+					}
+		if (message.content === '!flipcoin'){
+var yesorno = 'yes';
+					}
 
+	if (yesorno === 'yes'){
 
-
-
+					
 			var pnmb = Math.floor(Math.random() * 2);
 			var bscmsg = "You !flip the !coin and it's: ";
 			if (pnmb==0){pnmbf = 'Heads. ';}

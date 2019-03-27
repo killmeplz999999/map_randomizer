@@ -26,10 +26,7 @@ if (rdmmap==3){map='Skirmish (GW24RKRB) ';}
 		message.reply(bscmsg + map + pnmbf);
 
 				  	}
-});
-
-client.on('message', message => {
-    if (message.content === '!flip') {
+	if (message.content === '!flip') {
 
 
 
@@ -43,6 +40,7 @@ client.on('message', message => {
 		message.reply(bscmsg + pnmbf);
 
 				  	}
+	
 });
 
 // THIS  MUST  BE  THIS  WAY

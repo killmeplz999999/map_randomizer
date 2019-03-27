@@ -27,6 +27,24 @@ if (rdmmap==3){map='Skirmish (GW24RKRB) ';}
 
 				  	}
 });
+
+client.on('message', message => {
+    if (message.content === '!flip' or message.content === '!coin' message.content === '!coinflip') {
+
+
+
+
+			var pnmb = Math.floor(Math.random() * 2);
+			var bscmsg = "You !flip the !coin and it's: ";
+			if (pnmb==0){pnmbf = 'Heads. ';}
+			if (pnmb==1){pnmbf = 'Tails. ';}
+
+    	
+		message.reply(bscmsg + pnmbf);
+
+				  	}
+});
+
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
         

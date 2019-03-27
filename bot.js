@@ -26,7 +26,7 @@ if (rdmmap==3){map='Skirmish (GW24RKRB) ';}
 		message.reply(bscmsg + map + pnmbf);
 
 				  	}
-	if (message.content === '!flip') {
+	if (message.content === '!flip' or message.content === '!coin' or message.content === '!coinflip' or message.content === '!flipcoin' or) {
 
 
 
